@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting Platform</title>
+  <!--- custom css link-->
+  <link rel="stylesheet" href="nomination.css">
+ <!--- google font link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Poppins:wght@600;700&family=Rubik:wght@400;500&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form id="contact" action="" method="post">
+            <h1>Nomination Form</h1>
+            <h3> Please Fill the form below </h3>
+            <div class="row">
+                <!-- first column -->
+                <div class="column">                        
+                    <fieldset>
+                        <input type="text" placeholder="Full Name Of Nominee*" name="name" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <input type="text" placeholder="Programme of study *" name="fname" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        
+                    <!-- adding all country code list -->
+                    <fieldset>
+                        <input type="text" placeholder=" Your Phone number *" name="phone" id="phone" required autofocus>
+                    </fieldset>
+                </div>
+                 <!-- second column -->
+                 <div class="column">
+                    <fieldset>
+                        <p>Gender Of Nominee?</p>
+                        <div class="radio">
+                            <input type="radio" id="male" name="gender" required>
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" id="female" name="gender" required>
+                            <label for="female">Female</label>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <p>Upload A Picture of Nominee</p>
+                        <input type="file" id="file" required>
+                    </fieldset>
+                </div>
+            </div>
+            <!-- submit button -->
+            <button id="button" >Submit Now</button></a>
+                </form>
+    </div>
+ 
+    <!-- Javascript to initialize the code list -->
+    <script>
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+         separateDialCode: true
+         });
+      </script>
+    
+  </body>
